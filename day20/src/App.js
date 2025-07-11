@@ -7,9 +7,11 @@ const Square = memo(function Square({
   handleClick,
   value
 }) {
+  console.log(window.globalCount++);
   return <button className='square' onClick={handleClick}>{value}</button>;
 });
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const [squares, setSquares] = useState(Array(9).fill(null));
   const handleClick = i => {
     if (calculateWinner() || squares[i]) {

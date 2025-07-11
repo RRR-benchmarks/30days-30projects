@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import Darktheme from './components/Darktheme';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const [faq, setFaq] = useState({
     question1: {
       question: 'Who am I?',
@@ -44,6 +45,7 @@ const App = memo(function App() {
       <Darktheme />
       <h1>Frequently Asked Questions</h1>
       {Object.keys(faq).map(key => {
+      console.log(window.globalCount++);
       const item = faq[key];
       return <div key={key} className={item.className === 'hidden' ? 'section' : 'section-open'} onClick={() => handleClick(key)}>
               <h2>{item.question}</h2>

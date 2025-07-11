@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Darktheme from './DarkTheme';
 const GetUser = memo(function GetUser() {
+  console.log(window.globalCount++);
   const [data, setData] = useState(null);
   const navigate = useNavigate();
   const logout = () => {

@@ -18,6 +18,7 @@ const events = [{
   title: 'Event 3'
 }];
 const CalendarComponent = memo(function CalendarComponent() {
+  console.log(window.globalCount++);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const handleSelectEvent = e => {
     console.log(e);

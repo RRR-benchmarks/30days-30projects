@@ -5,6 +5,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import timeGridPlugin from '@fullcalendar/timegrid';
 export const App = memo(function App() {
+  console.log(window.globalCount++);
   const handleDateSelect = info => {
     let title = prompt('Enter a title for the event');
     if (title === null) return;

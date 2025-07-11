@@ -2,6 +2,7 @@ import { memo } from "react";
 import './App.css';
 import { useEffect } from 'react';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   useEffect(() => {
     setInterval(() => {
       const currentDate = new Date();

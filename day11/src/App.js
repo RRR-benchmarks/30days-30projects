@@ -1,6 +1,7 @@
 import { memo } from "react";
 import './App.css';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   return <div className='container'>
       
       <div className='left'>

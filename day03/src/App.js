@@ -2,6 +2,7 @@ import { memo } from "react";
 import logo from './logo.svg';
 import './App.css';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   // classList.toggle change the className to the argument string
   // so in the first one we change the classname of the
   const handleClick = e => {

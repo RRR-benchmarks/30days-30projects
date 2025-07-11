@@ -1,12 +1,14 @@
 import { memo } from "react";
 import './App.css';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   return <>
       <h1> Turn the switch </h1>
       <DarkMode />
     </>;
 });
 const DarkMode = memo(function DarkMode() {
+  console.log(window.globalCount++);
   const setDarkMode = () => {
     document.querySelector("body").setAttribute('data-theme', 'dark');
     localStorage.setItem("selectedTheme", "dark");

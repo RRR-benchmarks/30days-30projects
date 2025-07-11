@@ -2,6 +2,7 @@ import { memo } from "react";
 import React from 'react';
 import './DarkTheme.css';
 const Darktheme = memo(function Darktheme() {
+  console.log(window.globalCount++);
   function setLight() {
     document.querySelector('body').setAttribute('theme', 'light');
     localStorage.setItem('prevTheme', 'light');

@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import Darktheme from './DarkTheme';
 const Login = memo(function Login() {
+  console.log(window.globalCount++);
   const loginUsername = useRef('');
   const loginPassword = useRef('');
   const [loginInfo, setLoginInfo] = useState(null);

@@ -2,6 +2,7 @@ import { memo } from "react";
 import './App.css';
 import { useState } from 'react';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const [isHidden, setIsHidden] = useState(false);
   const handleSubmit = e => {
     e.preventDefault();

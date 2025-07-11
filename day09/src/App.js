@@ -2,6 +2,7 @@ import { memo } from "react";
 import './App.css';
 import { useState } from 'react';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);

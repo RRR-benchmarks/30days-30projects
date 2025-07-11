@@ -2,6 +2,7 @@ import { memo } from "react";
 import './App.css';
 import { useState, useEffect } from 'react';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   let [days, setDays] = useState(0);
   let [hours, setHours] = useState(0);
   let [minutes, setMinutess] = useState(0);

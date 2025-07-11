@@ -4,6 +4,7 @@ import './App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const [data, setData] = useState({});
   const city = useRef('Paris');
   useEffect(() => {

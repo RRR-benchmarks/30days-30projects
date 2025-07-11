@@ -2,6 +2,7 @@ import { memo } from "react";
 import './App.css';
 import { useState, useEffect } from 'react';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const [showComponent, setShowComponent] = useState(false);
   const [button, setbutton] = useState(true);
   const handleClick = () => {
@@ -15,6 +16,7 @@ const App = memo(function App() {
     </div>;
 });
 const RandomMeal = memo(function RandomMeal() {
+  console.log(window.globalCount++);
   const [meal, setmeal] = useState({});
   useEffect(() => {
     fetch('https://www.themealdb.com/api/json/v1/1/random.php').then(response => response.json()).then(data => setmeal(data.meals[0]));
@@ -31,9 +33,12 @@ const RandomMeal = memo(function RandomMeal() {
           <ul>
             {Array.from({
             length: 20
-          }, (_, i) => i + 1).filter(num => meal[`strIngredient${num}`]).map(num => <li key={num}>
+          }, (_, i) => i + 1).filter(num => meal[`strIngredient${num}`]).map(num => {
+            console.log(window.globalCount++);
+            return <li key={num}>
                   {meal[`strIngredient${num}`]} - {meal[`strMeasure${num}`]}
-                </li>)}
+                </li>;
+          })}
           </ul>
         </div>
         <div className="name-category-instruction">

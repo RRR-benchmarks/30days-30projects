@@ -4,6 +4,7 @@ import './App.css';
 import { useState } from 'react';
 import DarkTheme from './components/DarkTheme';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const [words, setWords] = useState([]);
   const input = useRef('');
   const [currentIndex, setCurrentIndex] = useState(0);

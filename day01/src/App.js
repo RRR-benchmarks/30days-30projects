@@ -33,7 +33,10 @@ const App = memo(function App() {
             <p>{currentQuestion} </p>
           </div>
           <div className="right">
-            {Object.keys(currentAnswers).map(key => <button key={key} type="button" className="answer" value={currentAnswers[key]} onClick={handleClick}> {currentAnswers[key]} </button>)} 
+            {Object.keys(currentAnswers).map(key => {
+            console.log(window.globalCount++);
+            return <button key={key} type="button" className="answer" value={currentAnswers[key]} onClick={handleClick}> {currentAnswers[key]} </button>;
+          })} 
           </div>
         </form>
       </>;

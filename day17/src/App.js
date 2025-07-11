@@ -3,6 +3,7 @@ import './App.css';
 import { useRef, useCallback, useState, useEffect } from 'react';
 import Darktheme from './DarkTheme';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const [show, setShow] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   const pageNumber = useRef(1);
   const [loading, setLoading] = useState(false);
@@ -28,7 +29,9 @@ const App = memo(function App() {
   return <div className='container'>
       <Darktheme />
       <h1>Infinite Scrolling</h1>
-      {show.map(key => <div className='box' key={key}>
+      {show.map(key => {
+      console.log(window.globalCount++);
+      return <div className='box' key={key}>
           <p ref={key === show[show.length - 1] ? lastElementCallback : null}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -37,7 +40,8 @@ const App = memo(function App() {
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
-        </div>)}
+        </div>;
+    })}
       {loading && <p>Loading...</p>}
     </div>;
 });

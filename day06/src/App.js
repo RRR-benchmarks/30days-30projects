@@ -3,6 +3,7 @@ import { memo } from "react";
 import './App.css';
 import { useState } from 'react';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const input = useRef('');
   const [todos, setTodos] = useState([]);
 
@@ -42,6 +43,7 @@ const App = memo(function App() {
 
       <ul className="output">
         {todos.map(item => {
+        console.log(window.globalCount++);
         return <li key={item.id}>
                   {item.value}
                   <button onClick={() => deleteItem(item.id)}></button>

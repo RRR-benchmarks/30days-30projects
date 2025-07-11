@@ -2,6 +2,7 @@ import { memo } from "react";
 import './App.css';
 import { useEffect, useState } from 'react';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const [sentence, setSentence] = useState('Loading...');
   useEffect(() => {
     const string = 'Hello World!';

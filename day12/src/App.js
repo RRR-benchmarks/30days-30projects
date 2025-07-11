@@ -3,6 +3,7 @@ import { memo } from "react";
 import './App.css';
 import { useState } from 'react';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const checkbox = useRef([]);
   const length = useRef(12);
   const [password, setPassword] = useState('');

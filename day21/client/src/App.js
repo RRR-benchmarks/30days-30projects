@@ -5,6 +5,7 @@ import GetUser from './components/GetUser';
 import Login from './components/Login';
 import Register from './components/Register';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   return <Router>
         <Routes>
           <Route path='/' element={<Register />} />

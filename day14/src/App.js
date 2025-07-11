@@ -5,6 +5,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import { useState } from 'react';
 import Column from './components/Column';
 const App = memo(function App() {
+  console.log(window.globalCount++);
   const initialData = {
     task: {
       'task-1': {
@@ -132,6 +133,7 @@ const App = memo(function App() {
       <div className='tasks'>
         <DragDropContext onDragEnd={onDragEnd}>
           {data.columnOrder.map(columnId => {
+          console.log(window.globalCount++);
           const column = data.columns[columnId];
           const task = column.taskIds.map(taskId => data.task[taskId]);
           return <Column key={column.id} column={column} tasks={task} />;

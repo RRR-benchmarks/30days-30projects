@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import Darktheme from './DarkTheme';
 const Register = memo(function Register() {
+  console.log(window.globalCount++);
   const registerUsername = useRef('');
   const registerPassword = useRef('');
   const navigate = useNavigate();
