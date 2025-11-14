@@ -1,3 +1,17 @@
+# **PROVENANCE NOTICE**
+
+---
+
+**Source Repository and Reference Commit:**  
+https://github.com/zackarydevove/30days-30projects/commit/fb965b4f2c4920909f348a3a81eb876ab7408692
+
+**Note:**  
+To comply with double-blind review requirements, this fork’s commit history was anonymized. The transformed and instrumented codes included in this repository were produced from this reference commit.
+
+---
+
+
+
 <h1>30 React Projects in 30 Days</h1>
 
 This repository contains a collection of 30 React projects completed over 30 consecutive days, aiming to improve my understanding and proficiency in using React.
